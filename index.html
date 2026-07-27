@@ -9,10 +9,11 @@
     :root {
       --bg: #0f1115;
       --text: #f4f6f8;
-      --muted: rgba(244, 246, 248, 0.78);
-      --line: rgba(244, 246, 248, 0.14);
-      --hover: rgba(244, 246, 248, 0.08);
+      --muted: rgba(244, 246, 248, 0.82);
+      --line: rgba(244, 246, 248, 0.18);
+      --hover: rgba(244, 246, 248, 0.1);
       --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --panel: rgba(7, 10, 14, 0.28);
       --space-1: 0.25rem;
       --space-2: 0.5rem;
       --space-3: 0.75rem;
@@ -20,6 +21,7 @@
       --space-6: 1.5rem;
       --space-8: 2rem;
       --radius-full: 999px;
+      --radius-lg: 1.25rem;
       --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
@@ -35,11 +37,12 @@
       display: grid;
       place-items: center;
       padding: var(--space-6);
-      background:
-        radial-gradient(circle at top, rgba(255,255,255,0.05), transparent 30%),
-        var(--bg);
       color: var(--text);
       font-family: var(--font);
+      background:
+        linear-gradient(rgba(7, 10, 14, 0.45), rgba(7, 10, 14, 0.45)),
+        url('./yachtlabs-background.jpg') center center / cover no-repeat,
+        var(--bg);
     }
 
     main {
@@ -48,6 +51,11 @@
       justify-items: center;
       gap: var(--space-8);
       text-align: center;
+      padding: clamp(1rem, 2vw, 1.5rem);
+      border-radius: var(--radius-lg);
+      background: var(--panel);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
     .logo-wrap {
@@ -81,13 +89,14 @@
       color: var(--muted);
       text-decoration: none;
       letter-spacing: 0.02em;
+      background: rgba(255, 255, 255, 0.04);
       transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
     }
 
     .link:hover,
     .link:focus-visible {
       background: var(--hover);
-      border-color: rgba(244, 246, 248, 0.3);
+      border-color: rgba(244, 246, 248, 0.34);
       color: var(--text);
       transform: translateY(-1px);
       outline: none;
@@ -111,7 +120,7 @@
 
     @media (max-width: 480px) {
       body { padding: var(--space-4); }
-      main { gap: var(--space-6); }
+      main { gap: var(--space-6); width: 100%; }
       .logo-wrap { width: min(82vw, 320px); }
       .link { width: 100%; }
       nav { width: 100%; }
