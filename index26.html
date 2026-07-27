@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>YachtLabs</title>
   <meta name="description" content="YachtLabs — simple landing page with social links and contact email.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
   <style>
     html, body {
       margin: 0;
@@ -12,12 +13,15 @@
       width: 100%;
     }
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Dosis;
       color: #fff;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 24px;
       background: url('yachtlabs-background.jpg') center center / cover no-repeat fixed;
       position: relative;
       overflow-x: hidden;
-    }
+      }
     body::before {
       content: '';
       position: fixed;
@@ -43,29 +47,30 @@
       height: auto;
     }
     .section, #footer {
-      background: rgba(0,0,0,0.38);
+      background: #4e473f;
       backdrop-filter: blur(4px);
       border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 16px;
-      padding: 28px;
-      margin: 0 auto 24px;
+      border-radius: 0px;
+      padding: 60px;
+      margin: 0 auto 40px;
     }
     .section h1 {
       margin: 0 0 8px;
-      font-size: 2rem;
-      line-height: 1.1;
+      font-size: 2.5rem;
+      font-weight: 300;
+      line-height: 1;
     }
     .section h2 {
       margin: 0 0 16px;
       font-size: 1.1rem;
       font-weight: 400;
-      color: rgba(255,255,255,0.85);
+      color: rgba(0,0,0);
     }
     .section span, #footer span {
       display: block;
       line-height: 1.7;
       font-size: 1rem;
-      color: rgba(255,255,255,0.95);
+      color: #7f7f7f;
       white-space: pre-line;
     }
     #footer {
