@@ -36,6 +36,19 @@
     .right3 { padding-top: clamp(24px, 7vw, 130px); }
     .left2 { padding-top: clamp(24px, 6vw, 110px); }
     .left3 { padding-top: clamp(24px, 4vw, 65px); }
+
+    .left-image, .right-image {
+      flex: 1 1 320px;
+      min-width: 0;
+      display: flex;
+      overflow: hidden;
+    }
+    .left-image img, .right-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      flex: 1 1 auto;
+    }
     .left, .left2, .left3, .right, .right2, .right3 { text-align: left; }
     h1 { margin: 0 0 8px; font-size: clamp(1.8rem, 3vw, 2.5rem); color: #ffffff; font-weight: 300; line-height: 1.05; }
     h2 { margin: 0 0 25px; font-size: clamp(1rem, 1.6vw, 1.1rem); color: #000; font-weight: 400; }
@@ -46,7 +59,7 @@
       .headercontent, .container1, .container2, .container3, .container4, .container5 { flex-direction: column; }
       .logo, .hero { max-width: 100%; }
       .container1, .container2, .container3, .container4, .container5 { min-height: auto; }
-      .left-image, .right-image { width: 100%; }
+      .left-image, .right-image { width: 100%; min-height: 0; }
     }
     @media (max-width: 700px) {
       .page { padding: 0 12px 20px; }
